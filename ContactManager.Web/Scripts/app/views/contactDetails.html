@@ -1,0 +1,89 @@
+<h3 class='page-header'>Contact Details</h3>
+<div class="col-md-12" ng-init="init()">
+    <div class="row">
+        <div class="col-md-12">
+            <a ui-sref="contacts">Back To List</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 col-md-3">
+            <div class="form-group">
+                <span class="thumbnail">
+                    <img src="/Content/UploadedImages/{{contactModel.ImageUrl}}">
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Contact Name</h3>
+                </div>
+                <div class="panel-body">
+                    {{contactModel.Name}}
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Phone No</h3>
+                </div>
+                <div class="panel-body">
+                    {{contactModel.PhoneNumber}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Email</h3>
+                </div>
+                <div class="panel-body">
+                    {{contactModel.Email}}
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Website</h3>
+                </div>
+                <div class="panel-body">
+                    {{contactModel.Website}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Address</h3>
+                </div>
+                <div class="panel-body">
+                    {{contactModel.Address}}
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Short Notes</h3>
+                </div>
+                <div class="panel-body">
+                    {{contactModel.ShortNotes}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

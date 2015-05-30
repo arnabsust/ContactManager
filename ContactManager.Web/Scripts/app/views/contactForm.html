@@ -1,0 +1,91 @@
+﻿<form name="contactForm" ng-submit="$parent.submit(contactForm.$valid)" novalidate>
+    <div class="row" ng-show="errorMessage">
+        <div class="col-md-12 errorBox">
+            <ul ng-bind-html="errorMessage">
+            </ul>
+        </div>
+    </div>
+    <div class="row" ng-show="contactModel.ImageUrl">
+        <div class="col-xs-6 col-md-3">
+            <div class="form-group">
+                <span class="thumbnail">
+                    <img src="/Content/UploadedImages/{{contactModel.ImageUrl}}" alt="...">
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 form-group">
+            <div class="input-group">
+                <span class="input-group-addon">Picture</span>
+                <input type="file" name="photo" class="form-control" file-upload="contactModel.Attachment" required />
+            </div>
+            <p ng-show="contactForm.photo.$invalid && !contactForm.photo.$pristine" class="help-block">Your photo is required.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 form-group">
+            <div class="input-group">
+                <span class="input-group-addon">Name</span>
+                <input type="text" name="name" class="form-control" ng-model="contactModel.Name" required />
+            </div>
+            <p ng-show="contactForm.name.$invalid && !contactForm.name.$pristine" class="help-block">You name is required.</p>
+        </div>
+
+        <div class="col-md-6 form-group">
+            <div class="input-group">
+                <span class="input-group-addon">Phone</span>
+                <input type="text" name="phone" class="form-control" ng-model="contactModel.PhoneNumber" required />
+            </div>
+            <p ng-show="contactForm.phone.$invalid && !contactForm.phone.$pristine" class="help-block">Phone number is required.</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 form-group">
+            <div class="input-group">
+                <span class="input-group-addon">Email</span>
+                <input type="email" name="email" class="form-control" ng-model="contactModel.Email" required />
+            </div>
+            <p ng-show="contactForm.email.$invalid && !contactForm.email.$pristine" class="help-block">Enter a valid email.</p>
+        </div>
+
+        <div class="col-md-6 form-group">
+            <div class="input-group">
+                <span class="input-group-addon">Website</span>
+                <input type="text" name="website" class="form-control" ng-model="contactModel.Website" />
+            </div>
+            <p ng-show="contactForm.website.$invalid && !contactForm.website.$pristine" class="help-block">Website is required.</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 form-group">
+            <div class="input-group">
+                <span class="input-group-addon">Address</span>
+                <textarea name="address" class="form-control" ng-model="contactModel.Address" required></textarea>
+            </div>
+            <p ng-show="contactForm.address.$invalid && !contactForm.address.$pristine" class="help-block">Address is required.</p>
+        </div>
+
+        <div class="col-md-6 form-group">
+            <div class="input-group">
+                <span class="input-group-addon">Short Notes</span>
+                <textarea name="notes" class="form-control" ng-model="contactModel.ShortNotes" required></textarea>
+            </div>
+            <p ng-show="contactForm.notes.$invalid && !contactForm.notes.$pristine" class="help-block">Short note is required.</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-offset-8 col-md-2">
+            <a class="btn btn-default pull-right" ui-sref="contacts">Back To List</a>
+        </div>
+        <div class="col-md-2" ng-show="!contactModel.ContactID">
+            <button type="submit" class="btn btn-success pull-right" ng-disabled="contactForm.$invalid">Add Contact</button>
+        </div>
+        <div class="col-md-2" ng-show="contactModel.ContactID">
+            <button type="submit" class="btn btn-success pull-right" ng-disabled="contactForm.$invalid">Update Contact</button>
+        </div>
+    </div>
+</form>

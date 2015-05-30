@@ -1,0 +1,65 @@
+<h3 class="page-header">Contact List</h3>
+<div class="row">
+    <div class="col-md-3">
+        <a class="btn btn-primary btn-block" ui-sref="addContact">Add New Contact</a>
+    </div>
+    <div class="col-md-3  pull-right">
+        <input class="form-control" placeholder="Search Here" type="text" ng-model="searchText" />
+    </div>
+</div>
+<hr />
+<div class="row" ng-init="init()">
+	<table class='table'>
+		<thead>
+			<tr>
+				<th>
+					<a href="#" ng-click="orderByField='Name'; reverseSort = !reverseSort">
+						Name 
+					</a>
+					<span ng-show="!reverseSort && orderByField=='Name'" class="glyphicon glyphicon-sort-by-alphabet"></span>
+					<span ng-show="reverseSort && orderByField=='Name'" class="glyphicon glyphicon-sort-by-alphabet-alt"></span>
+				</th>
+				<th>
+					<a href="#" ng-click="orderByField='Address'; reverseSort = !reverseSort">
+						Address
+					</a>
+					<span ng-show="!reverseSort && orderByField=='Address'" class="glyphicon glyphicon-sort-by-alphabet"></span>
+					<span ng-show="reverseSort && orderByField=='Address'" class="glyphicon glyphicon-sort-by-alphabet-alt"></span>
+				</th>
+				<th>
+					<a href="#" ng-click="orderByField='PhoneNumber'; reverseSort = !reverseSort">
+					Phone
+					</a>
+					<span ng-show="!reverseSort && orderByField=='PhoneNumber'" class="glyphicon glyphicon-sort-by-alphabet"></span>
+					<span ng-show="reverseSort && orderByField=='PhoneNumber'" class="glyphicon glyphicon-sort-by-alphabet-alt"></span>
+				</th>
+				<th>
+					<a href="#" ng-click="orderByField='Email'; reverseSort = !reverseSort">
+					Email
+					</a>
+					<span ng-show="!reverseSort && orderByField=='Email'" class="glyphicon glyphicon-sort-by-alphabet"></span>
+					<span ng-show="reverseSort && orderByField=='Email'" class="glyphicon glyphicon-sort-by-alphabet-alt"></span>
+				</th>
+				<th>
+					<a href="#" ng-click="orderByField='Website'; reverseSort = !reverseSort">
+					Website
+					</a>
+					<span ng-show="!reverseSort && orderByField=='Website'" class="glyphicon glyphicon-sort-by-alphabet"></span>
+					<span ng-show="reverseSort && orderByField=='Website'" class="glyphicon glyphicon-sort-by-alphabet-alt"></span>
+				</th>
+				<th>Action</th>
+			</tr>
+		</thead>
+
+		<tbody>
+            <tr ng-repeat="contact in contactList|filter:searchText|orderBy:orderByField:reverseSort">
+                <td>{{contact.Name}}</td>
+                <td>{{contact.Address}}</td>
+                <td>{{contact.PhoneNumber}}</td>
+                <td>{{contact.Email}}</td>
+                <td>{{contact.Website}}</td>
+                <td><a ui-sref="editContact({contactID: contact.ContactID})">Edit</a> <a ui-sref="contactDetails({contactID: contact.ContactID})">Details</a></td>
+            </tr>
+		</tbody>
+	</table>
+</div>

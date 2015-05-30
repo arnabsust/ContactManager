@@ -1,0 +1,10 @@
+E:\WORKSPACE\ENTITAS\PROJECTS\ContactManager\ContactManager.Domain\bin\Debug\ContactManager.Domain.dll.config
+E:\WORKSPACE\ENTITAS\PROJECTS\ContactManager\ContactManager.Domain\bin\Debug\ContactManager.Domain.dll
+E:\WORKSPACE\ENTITAS\PROJECTS\ContactManager\ContactManager.Domain\bin\Debug\ContactManager.Domain.pdb
+E:\WORKSPACE\ENTITAS\PROJECTS\ContactManager\ContactManager.Domain\bin\Debug\EntityFramework.dll
+E:\WORKSPACE\ENTITAS\PROJECTS\ContactManager\ContactManager.Domain\bin\Debug\EntityFramework.SqlServer.dll
+E:\WORKSPACE\ENTITAS\PROJECTS\ContactManager\ContactManager.Domain\bin\Debug\EntityFramework.xml
+E:\WORKSPACE\ENTITAS\PROJECTS\ContactManager\ContactManager.Domain\bin\Debug\EntityFramework.SqlServer.xml
+E:\WORKSPACE\ENTITAS\PROJECTS\ContactManager\ContactManager.Domain\obj\Debug\ContactManager.Domain.csprojResolveAssemblyReference.cache
+E:\WORKSPACE\ENTITAS\PROJECTS\ContactManager\ContactManager.Domain\obj\Debug\ContactManager.Domain.dll
+E:\WORKSPACE\ENTITAS\PROJECTS\ContactManager\ContactManager.Domain\obj\Debug\ContactManager.Domain.pdb
